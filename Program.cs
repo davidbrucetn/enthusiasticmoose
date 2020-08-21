@@ -21,7 +21,16 @@ namespace EnthusiasticMoose
             // Console.WriteLine(MooseAsks("Is Canada real?"));
 
             // Prints boolean return
-            Console.WriteLine(isTrue);
+            // Console.WriteLine(isTrue);
+            // if (MooseAsks("Is Canada real?")) // also works
+            if (isTrue)
+            {
+                MooseSays("Really? It seems very unlikely.");
+            }
+            else
+            {
+                MooseSays("I  K N E W  I T !!!");
+            }
         }
 
         // Make the moose ask questions
