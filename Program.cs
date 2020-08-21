@@ -16,12 +16,20 @@ namespace EnthusiasticMoose
             MooseSays("H I, I'M  E N T H U S I A S T I C !");
             MooseSays("I really am enthusiastic");
 
+            //method call
+            // Ask some questions
+            CanadaQuestion();
+
+            EnthusiasticQuestion();
+            LoveCSharpQuestion();
+            SecretQuestion();
+        }
+
+        static void CanadaQuestion()
+        {
             // As a question, stores boolean return in isTrue
             bool isTrue = MooseAsks("Is Canada real?");
-            // Console.WriteLine(MooseAsks("Is Canada real?"));
 
-            // Prints boolean return
-            // Console.WriteLine(isTrue);
             // if (MooseAsks("Is Canada real?")) // also works
             if (isTrue)
             {
@@ -30,6 +38,45 @@ namespace EnthusiasticMoose
             else
             {
                 MooseSays("I  K N E W  I T !!!");
+            }
+        }
+
+        static void EnthusiasticQuestion()
+        {
+            bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
+            if (isEnthusiastic)
+            {
+                MooseSays("Yay!");
+            }
+            else
+            {
+                MooseSays("You should try it!");
+            }
+        }
+
+        static void LoveCSharpQuestion()
+        {
+            bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
+            if (doesLoveCSharp)
+            {
+                MooseSays("Good job sucking up to your instructor!");
+            }
+            else
+            {
+                MooseSays("You will...oh, yes, you will...");
+            }
+        }
+
+        static void SecretQuestion()
+        {
+            bool isEverythingFine = MooseAsks("Do you want to know a secret?");
+            if (isEverythingFine)
+            {
+                MooseSays("ME TOO!!!! I love secrets...tell me one!");
+            }
+            else
+            {
+                MooseSays("Oh, no...secrets are the best, I love to share them!");
             }
         }
 
