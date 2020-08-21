@@ -17,17 +17,29 @@ namespace EnthusiasticMoose
             MooseSays("I really am enthusiastic");
 
             //method call
-            // Ask some questions
-            CanadaQuestion();
+            // Ask some AskTheMooses
+            // CanadaAskTheMoose();
+            // EnthusiasticAskTheMoose();
+            // LoveCSharpAskTheMoose();
+            // SecretAskTheMoose();
 
-            EnthusiasticQuestion();
-            LoveCSharpQuestion();
-            SecretQuestion();
+            AskTheMoose("Is Canada real?", "Really? It seems very unlikely.", "I  K N E W  I T !!!");
+            AskTheMoose("Are you enthusiastic?", "Yay!", "You should try it!");
+            AskTheMoose("Do you love C# yet?", "Good job sucking up to your instructor!", "You will...oh, yes, you will...");
+            AskTheMoose("Do you want to know a secret?", "ME TOO!!!! I love secrets...tell me one!", "Oh, no...secrets are the best, I love to share them!");
+
         }
 
-        static void CanadaQuestion()
+        // AskTheMoose receives the question to pass to MooseAsks, and the strings that will be the answers based on the boolean response.
+        static void AskTheMoose(string question, string yes, string no)
         {
-            // As a question, stores boolean return in isTrue
+            // MooseAsks ternary boolean - if true, answers yes string var, if false, answers no string var
+            MooseSays(MooseAsks(question) ? yes : no);
+        }
+
+        static void CanadaAskTheMoose()
+        {
+            // As a AskTheMoose, stores boolean return in isTrue
             bool isTrue = MooseAsks("Is Canada real?");
 
             // if (MooseAsks("Is Canada real?")) // also works
@@ -41,7 +53,7 @@ namespace EnthusiasticMoose
             }
         }
 
-        static void EnthusiasticQuestion()
+        static void EnthusiasticAskTheMoose()
         {
             bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
             if (isEnthusiastic)
@@ -54,7 +66,7 @@ namespace EnthusiasticMoose
             }
         }
 
-        static void LoveCSharpQuestion()
+        static void LoveCSharpAskTheMoose()
         {
             bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
             if (doesLoveCSharp)
@@ -67,7 +79,7 @@ namespace EnthusiasticMoose
             }
         }
 
-        static void SecretQuestion()
+        static void SecretAskTheMoose()
         {
             bool isEverythingFine = MooseAsks("Do you want to know a secret?");
             if (isEverythingFine)
@@ -80,18 +92,18 @@ namespace EnthusiasticMoose
             }
         }
 
-        // Make the moose ask questions
+        // Make the moose ask AskTheMooses
         // MooseAsks method returns a boolean value bool,
-        // and accepts a string question
-        static bool MooseAsks(string question)
+        // and accepts a string AskTheMoose
+        static bool MooseAsks(string AskTheMoose)
         {
-            Console.Write($"{question} (Y/N): ");
+            Console.Write($"{AskTheMoose} (Y/N): ");
             string answer = Console.ReadLine().ToLower();
 
-            // While answer is not y or n, keep asking question
+            // While answer is not y or n, keep asking AskTheMoose
             while (answer != "y" && answer != "n")
             {
-                Console.Write($"{question} (Y/N): ");
+                Console.Write($"{AskTheMoose} (Y/N): ");
                 answer = Console.ReadLine().ToLower();
             }
 
