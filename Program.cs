@@ -97,14 +97,16 @@ namespace EnthusiasticMoose
 
             // Received a y or n after while loop, return boolean
             // Two equal signs always used in C#
-            if (answer == "y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            // You can return the boolean this way or in the if/else
+            return (answer == "y");
+            // if (answer == "y")
+            // {
+            //     return true;
+            // }
+            // else
+            // {
+            //     return false;
+            // }
         }
 
         static void MooseSays(string message)
