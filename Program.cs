@@ -18,6 +18,7 @@ namespace EnthusiasticMoose
 
             // As a question, stores boolean return in isTrue
             bool isTrue = MooseAsks("Is Canada real?");
+            // Console.WriteLine(MooseAsks("Is Canada real?"));
 
             // Prints boolean return
             Console.WriteLine(isTrue);
@@ -39,6 +40,7 @@ namespace EnthusiasticMoose
             }
 
             // Received a y or n after while loop, return boolean
+            // Two equal signs always used in C#
             if (answer == "y")
             {
                 return true;
